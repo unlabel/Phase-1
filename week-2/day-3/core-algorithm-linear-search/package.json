@@ -1,0 +1,22 @@
+{
+    "name": "linearsearch",
+    "version": "1.0.0",
+    "description": "",
+    "main": "linear_search.js",
+    "scripts": {
+        "test": "jest -i"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/part-time-javascript-elbrus-bootcamp/core-algorithm-linear-search"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/part-time-javascript-elbrus-bootcamp/core-algorithm-linear-search"
+    },
+    "homepage": "https://github.com/part-time-javascript-elbrus-bootcamp/core-algorithm-linear-search#readme",
+    "devDependencies": {
+        "jest": "^28.1.0"
+    }
+}
