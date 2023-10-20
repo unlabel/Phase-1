@@ -1,15 +1,22 @@
-function searchStraightLineInclude(word, puzzle){
-let puzzle = [
-  ["a", "k", "f", "o", "x", "e", "s"],
-  ["s", "o", "a", "w", "a", "h", "p"],
-  ["i", "t", "c", "k", "e", "t", "n"],
-  ["o", "t", "s", "d", "h", "o", "h"],
-  ["s", "e", "x", "g", "s", "t", "a"],
-  ["u", "r", "p", "i", "w", "e", "u"],
-  ["z", "s", "b", "n", "u", "i", "r"],
-];
+function searchStraightLineInclude(word, puzzle) {
+  function searchStraightLineInclude(word, puzzle) {
+    let defaultPosition = false;
+    let reverseWord = word.split("").reverse().join("");
+    for (let i = 0; i < puzzle.length; i++) {
+      const rowWord = puzzle[i].join("");
+      if (rowWord.includes(word) || rowWord.includes(reverseWord)) {
+        return true;
+      }
+    }
+
+    for (let j = 0; j < puzzle[0].length; j++) {
+      const columnWord = puzzle.map((row) => row[j]).join("");
+      if (columnWord.includes(word) || columnWord.includes(reverseWord)) {
+        return true;
+      }
+    }
+    return defaultPosition;
+  }
 }
 
-function searchSnakingInclude(word, puzzle){
-
-}
+function searchSnakingInclude(word, puzzle) {}
