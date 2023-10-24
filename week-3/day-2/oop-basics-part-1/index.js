@@ -31,15 +31,10 @@ export class StarWars {
     return false;
   }
   isPadawan() {
-    if (this.age < 25) {
+    if (this.age < 40) {
       return `${this.name} is Padawan`;
     } else {
       return `${this.name} is Jedi`;
     }
   }
 }
-
-let character = new StarWars("Harry Potter", 18);
-let characterStarWars = new StarWars("Rey", 35);
-console.log(character.isPadawan());
-console.log(characterStarWars.isJedy());
