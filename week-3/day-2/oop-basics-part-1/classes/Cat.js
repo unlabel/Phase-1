@@ -12,4 +12,4 @@ export class Cat extends Mammal {
 
 let myCat = new Cat("Varya", "Aegean");
 
-console.log(myCat.showInfo());
+// console.log(myCat.showInfo());
