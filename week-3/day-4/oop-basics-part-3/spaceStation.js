@@ -21,4 +21,10 @@ class SpaceStation {
   addTasks(task) {
     this.tasks.add(task);
   }
+
+  runTask(task) {
+    task.runTask();
+  }
 }
+
+module.exports = {SpaceStation}

@@ -27,3 +27,5 @@ class Task {
     this.requiredEquipment.add(equipment);
   }
 }
+
+module.exports = { Task };

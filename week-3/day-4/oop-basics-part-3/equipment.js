@@ -5,3 +5,5 @@ class Equipment {
     this.location = location;
   }
 }
+
+module.exports = { Equipment };
