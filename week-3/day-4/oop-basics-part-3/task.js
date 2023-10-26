@@ -12,4 +12,18 @@ class Task {
     this.requiredResources = requiredResources;
     this.requiredEquipment = requiredEquipment;
   }
+
+  assignCrewMember(crewMember) {
+    this.assignedCrewMember.add(crewMember);
+  }
+
+  addRequiredResource(resource) {
+    this.requiredResources.add(resource);
+  }
+
+  addRequiredAction() {}
+
+  addRequiredEquipment(equipment) {
+    this.requiredEquipment.add(equipment);
+  }
 }
