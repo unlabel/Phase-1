@@ -1,4 +1,4 @@
-const Resource = require('./resource');
+const { Resource } = require("./resource");
 
 class Fuel extends Resource {
   constructor(name, quantity, consumptionRate, storageLocation, fuelType) {

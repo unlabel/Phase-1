@@ -13,27 +13,4 @@ class Resource {
   }
 }
 
-class Fuel extends Resource {
-  constructor(name, quantity, consumptionRate, storageLocation, fuelType) {
-    super(name, quantity, consumptionRate, storageLocation);
-    this.fuelType = fuelType;
-  }
-}
-
-class Food extends Resource {
-  constructor(
-    name,
-    quantity,
-    consumptionRate,
-    storageLocation,
-    expirationDate
-  ) {
-    super(name, quantity, consumptionRate, storageLocation);
-    this.expirationDate = expirationDate;
-  }
-}
-
-module.exports = { Resource, Fuel, Food };
-
-// const resource = new Resource("Вода", 1000, 1, "Комната хранения 1");
-// console.log(resource);
+module.exports = { Resource };

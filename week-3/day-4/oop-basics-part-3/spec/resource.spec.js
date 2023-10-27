@@ -1,5 +1,5 @@
-const { Resource, Fuel, Food } = require("../resource");
-// const { Fuel, Food } = require("../specialResources");
+const { Resource } = require("../resource");
+const { Fuel, Food } = require("../specialResources");
 const { Equipment } = require("../equipment");
 
 describe("Класс Resource", () => {
