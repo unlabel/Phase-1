@@ -1,30 +1,22 @@
 class Task {
-  constructor(
-    name,
-    description,
-    assignedCrewMember,
-    requiredResources = new Set(),
-    requiredEquipment = new Set()
-  ) {
+  constructor(name, description) {
     this.name = name;
     this.description = description;
-    this.assignedCrewMember = assignedCrewMember;
-    this.requiredResources = requiredResources;
-    this.requiredEquipment = requiredEquipment;
+    this.assignedCrewMember = null;
+    this.requiredResources = [];
+    this.requiredEquipment = [];
   }
 
-  assignCrewMember(crewMember) {
-    this.assignedCrewMember.add(crewMember);
+  assignCrewMember(person) {
+    this.assignedCrewMember = person;
   }
 
   addRequiredResource(resource) {
-    this.requiredResources.add(resource);
+    this.requiredResources.push(resource);
   }
 
-  addRequiredAction() {}
-
   addRequiredEquipment(equipment) {
-    this.requiredEquipment.add(equipment);
+    this.requiredEquipment.push(equipment);
   }
 }
 

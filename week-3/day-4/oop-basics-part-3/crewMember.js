@@ -27,3 +27,5 @@ class Astronaut extends CrewMember {
     this.spacewalkExperience = spacewalkExperience;
   }
 }
+
+module.exports = { CrewMember };
