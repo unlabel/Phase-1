@@ -13,12 +13,18 @@ singleQuote
 // multiQuotes.then((data) => console.log(data));
 
 // multiQuotes;
-// let count = process.argv[2];
-// for (let i = 1; i <= count; i++) {
-//   then((data) =>
-//     fs.writeFile("./quotes/random-.txt", `${data[0].q}\n-- ${data[0].a}`),
-//   ).catch((err) => console.log("Ошибка при записи цитаты", err));
-// }
+let count = process.argv[2];
+for (let i = 1; i <= count; i++) {
+  const singleQuote = Quote.getRandomQuote();
+  singleQuote
+    .then((data) =>
+      fs.writeFile(
+        `./quotes/random-${count}.txt`,
+        `${data[0].q}\n-- ${data[0].a}`,
+      ),
+    )
+    .catch((err) => console.log("Ошибка при записи цитаты", err));
+}
 
 // const author = singleQuote.then((data) =>
 //   fs.writeFile("./quotes/random.txt", data[0].a),

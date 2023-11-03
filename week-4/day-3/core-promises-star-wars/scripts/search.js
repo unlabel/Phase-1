@@ -7,3 +7,4 @@
 // starWars.getSpeciesById(id)
 
 // Тут ваш код.
+document.getElementById
