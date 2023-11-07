@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest spec/*[sS]pec.js -i"
+    "start": "node index.js",
+    "test": "jest -i"
   },
   "repository": {
     "type": "git",
