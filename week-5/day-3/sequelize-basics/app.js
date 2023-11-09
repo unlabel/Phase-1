@@ -1,4 +1,5 @@
 const db = require("./models");
+const { hwsequelize } = require("./models/");
 
 async function testConnection() {
   try {
@@ -8,11 +9,26 @@ async function testConnection() {
     console.log("Error -------->", error);
   }
 }
-testConnection()
+// testConnection();
 
-function addSingleUser() {}
+async function addSingleUser(username, email, phone_number) {
+  try {
+    await hwsequelize.create({ username, email, phone_number });
+  } catch (error) {
+    console.log("Ошибка записи пользователя", error);
+  }
+}
+// addSingleUser("prospector_saloon", "test@email.com", "+79780000000");
 
-function addMultipleUsers() {}
+async function addMultipleUsers(username, email, phone_number) {
+  try {
+    await hwsequelize.create({ username, email, phone_number });
+  } catch (error) {
+    console.log("Ошибка при записи нескольких пользователй", error);
+  }
+}
+addMultipleUsers("dr_mitchell", "test@mail.ru", "+79180000000");
+addMultipleUsers("peter", "work@mail.ru", "+79180000001");
 
 function getAllUsers() {}
 
