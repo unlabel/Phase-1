@@ -19,6 +19,7 @@ async function addSingleUser(username, email, phone_number) {
   }
 }
 // addSingleUser("prospector_saloon", "test@email.com", "+79780000000");
+// addSingleUser("Vasya", "study@email.com", "+79780000999");
 
 async function addMultipleUsers(username, email, phone_number) {
   try {
@@ -27,15 +28,62 @@ async function addMultipleUsers(username, email, phone_number) {
     console.log("Ошибка при записи нескольких пользователй", error);
   }
 }
-addMultipleUsers("dr_mitchell", "test@mail.ru", "+79180000000");
-addMultipleUsers("peter", "work@mail.ru", "+79180000001");
+// addMultipleUsers("dr_mitchell", "test@mail.ru", "+79180000000");
+// addMultipleUsers("peter", "work@mail.ru", "+79180000001");
 
-function getAllUsers() {}
+async function getAllUsers() {
+  try {
+    await hwsequelize.findAll({ raw: true });
+  } catch (error) {
+    console.log("Что-то пошло не так", error);
+  }
+}
+// getAllUsers();
 
-function editSingleUser() {}
+async function editSingleUser() {
+  try {
+    await hwsequelize.update({ realname: "Trudy" }, { where: { id: 1 } });
+  } catch (error) {
+    console.log("Просчитался, но где?", error);
+  }
+}
+// editSingleUser();
 
-function findUserByName() {}
+async function findUserByName() {
+  try {
+    await hwsequelize.findOne({
+      where: { username: "peter" },
+      raw: true,
+    });
+  } catch (error) {
+    console.log("Совпадений не найдено", error);
+  }
+}
 
-function countUsers() {}
+async function countUsers() {
+  try {
+    await hwsequelize.findAndCountAll({
+      where: {
+        username: "peter",
+      },
+      offset: 10,
+      limit: 5,
+    });
+  } catch (error) {
+    console.log("Просчитался, но где?", error);
+  }
+}
+// countUsers();
 
-function deleteUserById() {}
+async function deleteUserById() {
+  try {
+    await hwsequelize.destroy({
+      where: {
+        id: 7,
+      },
+    });
+  } catch (error) {
+    console.log("Зараза, этот пользователь ещё с нами", error);
+  }
+}
+deleteUserById();
