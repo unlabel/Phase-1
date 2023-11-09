@@ -1,0 +1,13 @@
+{
+  "name": "sequelize-basics",
+  "version": "1.0.0",
+  "description": "## Release 0. Подготовить Node проект Наконец-то мы вернёмся к работе с JavaScript и Node.js. Настрой всё необходимое для работы — инициализируй `package.json`, установи и настрой ESLint и прочие утилиты для удобной разработки. Проверь содержимое `.gitiginore` и отредактируй его, если чего-то не хватает.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
