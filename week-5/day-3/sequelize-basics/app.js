@@ -8,7 +8,7 @@ async function testConnection() {
     console.log("Error -------->", error);
   }
 }
-testConnection();
+testConnection()
 
 function addSingleUser() {}
 
