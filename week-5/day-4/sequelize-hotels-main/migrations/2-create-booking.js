@@ -17,6 +17,7 @@ module.exports = {
         },
       },
       room_id: {
+        unique: true,
         type: Sequelize.INTEGER,
       },
       createdAt: {
