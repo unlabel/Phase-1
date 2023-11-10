@@ -20,6 +20,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       hotel_id: {
+        unique: true,
         type: Sequelize.INTEGER,
       },
       createdAt: {
