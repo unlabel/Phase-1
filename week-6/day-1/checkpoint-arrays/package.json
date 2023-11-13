@@ -1,0 +1,26 @@
+{
+  "name": "checkpoint-arrays",
+  "version": "1.1.0",
+  "description": "Реши задачу про космонавтов за 45 минут!",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/part-time-javascript-elbrus-bootcamp/checkpoint-arrays"
+  },
+  "keywords": [
+    "js",
+    "arrays",
+    "array-methods"
+  ],
+  "devDependencies": {
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^26.5.3",
+    "jest": "^28.1.3"
+  }
+}
