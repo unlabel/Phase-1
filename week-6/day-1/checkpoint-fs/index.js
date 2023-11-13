@@ -1,8 +1,16 @@
 // твой код здесь
+const fs = require("fs").promises;
 
-function getPadawanNames() {
-  // это заглушка (stub) — меняй её как угодно, но не трогай тесты
+async function getPadawanNames() {
+  try {
+    let data = await fs.readFile("./data/padawans.txt", "utf-8");
+    const padawanArray = data.split("\n");
+    return padawanArray;
+  } catch (error) {
+    console.log("Ошибка чтения файла", error);
+  }
 }
+getPadawanNames();
 
 function getLightsaberScores() {
   // это заглушка (stub) — меняй её как угодно, но не трогай тесты

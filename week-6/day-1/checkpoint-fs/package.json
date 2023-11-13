@@ -4,6 +4,7 @@
   "description": "Реши задачу про падаванов за 45 минут!",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "jest"
   },
   "private": true,
